@@ -1,0 +1,32 @@
+<!-- Search bar -->
+<div id="searchbox">
+  <button class="recherche"><i class="fa fa-search"></i></button>
+  <input type="text" [(ngModel)]="searchedExpression" name="searchedExpression" placeholder="Rechercher un email" />
+  <p>{{searchedExpression}}</p>
+  <button class="reinitialisation" (click)="razChampRecherche()"><i class="fa fa-times"></i></button>
+</div>
+
+<!-- Boite de réception -->
+<table id="mailbox" >
+    <thead>
+      <tr>
+        <th *ngFor="let field of fields"  class="field.alias">
+          <a>{{field.description}}</a>
+          <i class="caret_tri"></i>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emails of (mailRepertory.emails)" class="email_{{emails.id}}" [routerLink]="[emails.id]" routerLinkActive="active">
+        <td class="from">{{emails.from}}</td>
+        <td class="to">{{emails.to}}</td>
+        <td class="subject">{{emails.subject}}</td>
+        <td class="date">{{emails.date | date: "dd/MM/yyyy HH:mm"}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4" class="messages_quantities">Il y a {{emailsQuantity}} messages</td>
+      </tr>
+    </tfoot>
+  </table>

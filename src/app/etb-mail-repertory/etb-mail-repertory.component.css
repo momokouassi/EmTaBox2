@@ -1,0 +1,53 @@
+/**
+ * Boite de réception
+ */
+ table#mailbox {
+	width: 100%;
+	border-collapse: collapse;
+}
+table#mailbox thead tr th {
+	text-align: left;
+}
+table#mailbox thead tr th > i.caret_tri {
+	margin-left: 20px;
+}
+table#mailbox thead tr th.from {
+	width: 200px;
+}
+table#mailbox thead tr th.to {
+	width: 200px;
+}
+table#mailbox thead tr th.subject {
+	width: calc(100% - 600px);
+}
+table#mailbox thead tr th.date {
+	width: 200px;
+}
+table#mailbox thead tr:nth-child(n) {
+	background: #F1F1F1;
+}
+table#mailbox tr th,
+table#mailbox tr td {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+table#mailbox tbody tr {
+	border-top: 2px solid #F3F3F3;
+}
+table#mailbox tbody tr:last-child {
+	border-bottom: 2px solid #F3F3F3;
+}
+table#mailbox tbody tr:nth-child(n) {
+	background: #FAFAFA;
+}
+table#mailbox tbody tr:nth-child(2n) {
+	background: #FFFFFF;
+}
+table#mailbox tbody tr:hover {
+	background: #0489B1;
+	color: #F3F3F3;
+}
+.messages_quantities {
+	font-style: italic;
+	color: #707070;
+}

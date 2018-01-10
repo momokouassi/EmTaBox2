@@ -1,0 +1,19 @@
+/**
+ * Détails d'un mail
+ */
+#mail_present {
+	margin-top: 20px;
+	padding: 20px;
+}
+
+#mail_present .champ_present .intro {
+	font-weight: bold;
+}
+
+#mail_present .text {
+	width: 800px;
+}
+#mail_present .text p {
+	margin: 20px 0;
+	text-align: justify;
+}

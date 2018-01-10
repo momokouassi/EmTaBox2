@@ -1,0 +1,18 @@
+<div id="mail_present" *ngIf="email != null" >
+  <h2>{{email.subject}}</h2>
+  <p class="champ_present">
+    <span class="intro">De :</span>
+    <span class="content">{{email.from}}</span>
+  </p>
+  <p class="champ_present">
+    <span class="intro">À :</span>
+    <span class="content">{{email.to}}</span>
+  </p>
+  <p class="champ_present">
+    <span class="intro">Date :</span>
+    <span class="content">{{email.date | date:'dd/MM/yyyy HH:mm'}}</span>
+  </p>
+  <div class="text">
+    <div [innerHTML]="email.content"></div>
+  </div>
+</div>

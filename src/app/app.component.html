@@ -1,0 +1,29 @@
+<div id="webmail" class="container">
+  
+  <!-- Navigation bar -->
+  <nav id="navbar">
+    <span id="logo">
+      <a routerLink="/RECEPTION" routerLinkActive="active">EmTaBox</a>
+    </span>
+    <ul>
+      <li *ngFor="let mailRepertory of boxRepertory">
+        <a (click)="displayMailRepertory(mailRepertory.value)" [routerLink]="[mailRepertory.value]" routerLinkActive="active">{{mailRepertory.label}}</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container_2">
+    <!-- Tools Bar -->
+    <nav id="toolbar">
+      <ul>
+        <li>
+          <a href="#" routerLink="/writeMail" routerLinkActive="active"><i class="fa fa-pencil-alt ecrire_message"></i>Nouveau message</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- App navigation -->
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
